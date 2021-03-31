@@ -20,6 +20,7 @@ class LocalDataRepository {
     }
     
     func addArticles(_ data: [Article]) {
+        removeOldArticleData()
         realmManager.add(data, update: false)
     }
     

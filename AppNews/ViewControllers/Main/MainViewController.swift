@@ -46,13 +46,14 @@ class MainViewController: UIViewController {
             }
             if page == 1 {
                 self.articles = articles
+                LocalDataRepository.shared.addArticles(articles)
             }
             else {
                 self.articles.append(contentsOf: articles)
             }
             self.tableView.reloadData()
             self.hideAllLoading()
-            LocalDataRepository.shared.addArticles(self.articles)
+            
         } onFailure: { (error) in
             if let error = error as? BaseError {
                 self.showErrorAlert(error.message)
