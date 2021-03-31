@@ -96,4 +96,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.article = articles[indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = R.storyboard.main.detailViewController()!
+        detailVC.article = articles[indexPath.row]
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        }
+    }
 }

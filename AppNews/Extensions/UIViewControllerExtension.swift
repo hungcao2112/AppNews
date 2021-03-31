@@ -20,7 +20,7 @@ extension UIViewController {
     }
     
     func showErrorAlert(_ msg: String?) {
-        let alertController = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
         alertController.addAction(
             UIAlertAction(title: "OK", style: .cancel, handler: { _ in
             })
