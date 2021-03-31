@@ -22,7 +22,13 @@ class MainViewController: UIViewController {
         setupTableView()
         setupPullToRefresh()
         setupLoadMore()
+        getLocalArticles()
         getArticles(page: page)
+    }
+    
+    private func getLocalArticles() {
+        self.articles = LocalDataRepository.shared.getArticales()
+        self.tableView.reloadData()
     }
     
     private func setupTableView() {
@@ -38,9 +44,15 @@ class MainViewController: UIViewController {
             guard let articles = articles else {
                 return
             }
-            self.articles.append(contentsOf: articles)
+            if page == 1 {
+                self.articles = articles
+            }
+            else {
+                self.articles.append(contentsOf: articles)
+            }
             self.tableView.reloadData()
             self.hideAllLoading()
+            LocalDataRepository.shared.addArticles(self.articles)
         } onFailure: { (error) in
             if let error = error as? BaseError {
                 self.showErrorAlert(error.message)

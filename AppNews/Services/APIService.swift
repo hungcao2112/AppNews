@@ -22,7 +22,7 @@ class APIService {
         session = Session(configuration: configuration)
     }
     
-    private func isConnectedToInternet() ->Bool {
+    func isConnectedToInternet() ->Bool {
         return NetworkReachabilityManager()!.isReachable
     }
     

@@ -7,21 +7,23 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-class Article: Mappable {
+class Article: Object, Mappable {
     
-    var title: String?
-    var description: String?
-    var imageUrl: String?
-    var sourceUrl: String?
-    var publishedAt: Date?
+    @objc dynamic var newsTitle: String?
+    @objc dynamic var newsDescription: String?
+    @objc dynamic var imageUrl: String?
+    @objc dynamic var sourceUrl: String?
+    @objc dynamic var publishedAt: Date?
     
-    required init?(map: Map) {
+    convenience required init?(map: Map) {
+        self.init()
     }
     
     func mapping(map: Map) {
-        title <- map["title"]
-        description <- map["description"]
+        newsTitle <- map["title"]
+        newsDescription <- map["description"]
         imageUrl <- map["urlToImage"]
         sourceUrl <- map["url"]
         publishedAt <- (map["publishedAt"], ISO8601DateTransform())

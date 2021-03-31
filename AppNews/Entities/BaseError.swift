@@ -17,7 +17,7 @@ enum ApiErrorType: Error {
     var localizedDescription: String {
         switch self {
         case .networkNotConnected:
-            return "Check your Internet connection and try again"
+            return "No Internet connection"
         case .dataNotFound:
             return "Data not found. Please try again"
         case .requestError:

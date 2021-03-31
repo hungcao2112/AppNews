@@ -26,8 +26,8 @@ class NewsTableViewCell: UITableViewCell {
             return
         }
         newsImageView.kf.setImage(with: URL(string: article.imageUrl ?? ""))
-        newsTitleLabel.text = article.title
-        newsDescriptionLabel.text = article.description
+        newsTitleLabel.text = article.newsTitle
+        newsDescriptionLabel.text = article.newsDescription
         newsTimeLabel.text = article.publishedAt?.toString()
     }
     

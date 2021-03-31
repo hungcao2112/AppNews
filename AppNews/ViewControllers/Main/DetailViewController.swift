@@ -21,6 +21,10 @@ class DetailViewController: UIViewController {
     }
     
     private func setupWebView() {
+        if !APIService.shared.isConnectedToInternet() {
+            self.showErrorAlert("No Internet connection")
+            return
+        }
         guard let article = article,
               let sourceURL = URL(string: article.sourceUrl ?? "") else {
             return
