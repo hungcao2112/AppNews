@@ -17,7 +17,7 @@ class BaseResponse<T: Mappable>: Mappable {
     }
     
     func mapping(map: Map) {
-        status <- map["articles"]
+        status <- map["status"]
         totalResults <- map["totalResults"]
         articles <- map["articles"]
     }

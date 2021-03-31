@@ -48,7 +48,13 @@ class APIService {
                     
                     completion(mappedData.articles, nil)
                 } else {
-                    completion(nil, ApiErrorType.requestError)
+                    if let value = response.value as? [String: Any],
+                       let error = BaseError(JSON: value) {
+                        completion(nil, error)
+                    }
+                    else {
+                        completion(nil, ApiErrorType.requestError)
+                    }
                 }
                 break
                 

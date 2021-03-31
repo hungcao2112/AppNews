@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import ObjectMapper
 
 enum ApiErrorType: Error {
     case networkNotConnected
@@ -22,5 +23,22 @@ enum ApiErrorType: Error {
         case .requestError:
             return "An error occured. Please try again"
         }
+    }
+}
+
+class BaseError: Mappable, Error {
+    
+    var status: String?
+    var code: String?
+    var message: String?
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        status <- map["status"]
+        code <- map["code"]
+        message <- map["message"]
     }
 }

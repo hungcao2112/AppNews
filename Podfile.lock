@@ -1,6 +1,8 @@
 PODS:
   - Alamofire (5.4.1)
   - Kingfisher (6.2.1)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.5.0)
   - ObjectMapper (4.2.0)
   - R.swift (5.4.0):
     - R.swift.Library (~> 5.3.0)
@@ -9,6 +11,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - Kingfisher (~> 6.0)
+  - MBProgressHUD (~> 1.2.0)
+  - MJRefresh (~> 3.5.0)
   - ObjectMapper (~> 4.2.0)
   - R.swift (= 5.4.0)
 
@@ -16,6 +20,8 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
+    - MBProgressHUD
+    - MJRefresh
     - ObjectMapper
     - R.swift
     - R.swift.Library
@@ -23,10 +29,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
 
-PODFILE CHECKSUM: f9fe916460ba5eb0b5334452440cbc1cfda4eab1
+PODFILE CHECKSUM: 15f7f92f50079ca12d3a88b1a0e9112f81727875
 
 COCOAPODS: 1.10.1
