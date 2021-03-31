@@ -32,7 +32,7 @@ class APIService {
             return
         }
         var defaultParams = params
-        defaultParams["apiKey"] = ["f8c3c1452cd44c00a00d8906313861e3"]
+        defaultParams["apiKey"] = [Constants.API_KEY]
         session.request(url, method: method, parameters: defaultParams).responseJSON(completionHandler: { response in
 
             switch response.result {
