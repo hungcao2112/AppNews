@@ -25,6 +25,7 @@
 		11C4DE3E2614BA1500CEF8FD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4DE3D2614BA1500CEF8FD /* DateExtension.swift */; };
 		11C4DE422614BD1100CEF8FD /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4DE412614BD1100CEF8FD /* UIViewControllerExtension.swift */; };
 		11C4DE682614D77300CEF8FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4DE672614D77300CEF8FD /* DetailViewController.swift */; };
+		11C4DE842614E17000CEF8FD /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4DE832614E17000CEF8FD /* RealmManager.swift */; };
 		3A0A738B027632100EE47D40 /* Pods_AppNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4275396A5B434681FDA6164C /* Pods_AppNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		11C4DE3D2614BA1500CEF8FD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		11C4DE412614BD1100CEF8FD /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		11C4DE672614D77300CEF8FD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		11C4DE832614E17000CEF8FD /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		4275396A5B434681FDA6164C /* Pods_AppNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDB2CA1A766161A71C89DC4 /* Pods-AppNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNews.release.xcconfig"; path = "Target Support Files/Pods-AppNews/Pods-AppNews.release.xcconfig"; sourceTree = "<group>"; };
 		E70B740C71118B6C4B785F4F /* Pods-AppNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNews.debug.xcconfig"; path = "Target Support Files/Pods-AppNews/Pods-AppNews.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				11C4DE192614B4E200CEF8FD /* Services */,
 				11C4DE212614B54600CEF8FD /* ViewControllers */,
 				11C4DE232614B57700CEF8FD /* Entities */,
+				11C4DE812614E15100CEF8FD /* Ultilities */,
 				11C4DE2E2614B63400CEF8FD /* Constants.swift */,
 				11C4DDE42614B17100CEF8FD /* AppDelegate.swift */,
 				11C4DDE62614B17100CEF8FD /* SceneDelegate.swift */,
@@ -156,6 +159,14 @@
 				11C4DE412614BD1100CEF8FD /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		11C4DE812614E15100CEF8FD /* Ultilities */ = {
+			isa = PBXGroup;
+			children = (
+				11C4DE832614E17000CEF8FD /* RealmManager.swift */,
+			);
+			path = Ultilities;
 			sourceTree = "<group>";
 		};
 		267E17A9F4FA23C4FA2D4348 /* Frameworks */ = {
@@ -312,6 +323,7 @@
 			files = (
 				11C4DE1B2614B51200CEF8FD /* APIService.swift in Sources */,
 				11C4DE3E2614BA1500CEF8FD /* DateExtension.swift in Sources */,
+				11C4DE842614E17000CEF8FD /* RealmManager.swift in Sources */,
 				11C4DE392614B71F00CEF8FD /* NewsTableViewCell.swift in Sources */,
 				11C4DE1F2614B53300CEF8FD /* ArticleService.swift in Sources */,
 				11C4DDE52614B17100CEF8FD /* AppDelegate.swift in Sources */,

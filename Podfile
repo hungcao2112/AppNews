@@ -11,6 +11,7 @@ target 'AppNews' do
   pod 'ObjectMapper', '~> 4.2.0'
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'MJRefresh', '~> 3.5.0'
+  pod 'RealmSwift', '~> 10.7.2'
   # Pods for AppNews
 
 end
